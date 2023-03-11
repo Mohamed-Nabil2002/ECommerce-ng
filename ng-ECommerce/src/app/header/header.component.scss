@@ -1,0 +1,49 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+
+  h1 {
+    color: blue;
+    margin: 0;
+    font-size: 30px;
+  }
+
+  .nav-search {
+    display: flex;
+    margin: 5px 5% 5%;
+    flex: 1;
+
+    input {
+      color: blue;
+      border: 1px solid blue;
+      height: 30px;
+      border-right: 0px;
+      flex: 1;
+    }
+
+    button {
+      color: blue;
+      border: 1px solid blue;
+      height: 34px;
+      border-left: 0px;
+    }
+  }
+
+  ul {
+    display: inline-flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      padding-left: 15px;
+      padding-top: 15px;
+
+      a {
+        text-decoration: none;
+        color: blue;
+      }
+    }
+
+  }
+}
