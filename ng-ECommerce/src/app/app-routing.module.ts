@@ -1,3 +1,4 @@
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SellerAuthComponent } from './seller-auth/seller-auth.component';
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
@@ -12,6 +13,11 @@ const routes: Routes = [
     path: "seller-auth",
     component: SellerAuthComponent
   },
+  {
+    path: "**",
+    component: PageNotFoundComponent
+  },
+
 ];
 
 @NgModule({

@@ -7,6 +7,10 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { SellerAuthComponent } from './seller-auth/seller-auth.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AngularSvgIconModule } from 'angular-svg-icon';
+import { HttpClientModule } from '@angular/common/http';
+import { MaterialModule } from './material.module';
+
 
 @NgModule({
   declarations: [
@@ -14,11 +18,14 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     HeaderComponent,
     HomeComponent,
     SellerAuthComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    AngularSvgIconModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
