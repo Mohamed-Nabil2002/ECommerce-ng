@@ -1,0 +1,16 @@
+{
+  "seller": [
+    {
+      "name": "ahmed",
+      "email": "mohamed@lagorta.com",
+      "password": "123",
+      "id": 1
+    },
+    {
+      "name": "Mostafa",
+      "email": "Mostafa@lagorta.com",
+      "password": "789",
+      "id": 2
+    }
+  ]
+}
