@@ -2,15 +2,9 @@
   "seller": [
     {
       "name": "ahmed",
-      "email": "mohamed@lagorta.com",
-      "password": "123",
+      "password": "147852",
+      "email": "reemnabil200270@gmail.com",
       "id": 1
-    },
-    {
-      "name": "Mostafa",
-      "email": "Mostafa@lagorta.com",
-      "password": "789",
-      "id": 2
     }
   ]
 }

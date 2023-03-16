@@ -11,6 +11,7 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from './material.module';
 import { FormsModule } from '@angular/forms';
+import { SellerHomeComponent } from './seller-home/seller-home.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     SellerAuthComponent,
     PageNotFoundComponent,
+    SellerHomeComponent,
   ],
   imports: [
     BrowserModule,
