@@ -1,4 +1,3 @@
-import { AuthGuard } from './auth.guard';
 import { SellerHomeComponent } from './seller-home/seller-home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SellerAuthComponent } from './seller-auth/seller-auth.component';
@@ -17,8 +16,7 @@ const routes: Routes = [
   },
   {
     path: "seller-home",
-    component: SellerHomeComponent,
-    canActivate: [AuthGuard]
+    component: SellerHomeComponent
   },
   {
     path: "**",
