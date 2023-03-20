@@ -7,14 +7,14 @@ import { SellerService } from './services/seller.service';
   providedIn: 'root'
 })
 export class AuthGuard implements CanActivate {
-  constructor(private sellerService: SellerService) {}
+  constructor(private sellerService: SellerService) { }
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
 
-      // if (localStorage.getItem('seller')) {
-      //   return true
-      // }
-    return true;
+    if (localStorage.getItem('seller')) {
+      return true
+    }
+    return this.sellerService.isSellerLoggedIn;
   }
 }

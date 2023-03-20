@@ -1,52 +1,5 @@
 {
   "seller": [
-    {
-      "name": "ahmed",
-      "password": "147852",
-      "email": "reemnabil200270@gmail.com",
-      "id": 1
-    },
-    {
-      "name": "",
-      "password": "admin",
-      "email": "admin",
-      "id": 2
-    },
-    {
-      "name": "",
-      "password": "admin",
-      "email": "admin",
-      "id": 3
-    },
-    {
-      "name": "",
-      "password": "admin",
-      "email": "admin",
-      "id": 4
-    },
-    {
-      "name": "mohamed",
-      "password": "admin",
-      "email": "admin",
-      "id": 5
-    },
-    {
-      "name": "d",
-      "password": "admin",
-      "email": "admin",
-      "id": 6
-    },
-    {
-      "name": "ahmed",
-      "password": "admin",
-      "email": "admin",
-      "id": 7
-    },
-    {
-      "name": "Ali",
-      "password": "Ali",
-      "email": "Ali@test123",
-      "id": 8
-    }
+
   ]
 }
