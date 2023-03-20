@@ -9,6 +9,7 @@ import { SellerService } from '../services/seller.service';
   styleUrls: ['./seller-auth.component.scss']
 })
 export class SellerAuthComponent implements OnInit {
+  showLogin: boolean = false;
 
   constructor(private sellerService: SellerService,
     private router: Router,
@@ -16,12 +17,24 @@ export class SellerAuthComponent implements OnInit {
     private seller: SellerService) { }
 
   ngOnInit() {
-    this.seller.reloadSeller();
+    // this.seller.reloadSeller();
   }
 
   signUp(data: SignUp) {
     console.log(data);
     this.sellerService.userSignUp(data);
+  }
+
+  login() {
+    console.log("login");
+  }
+
+  openLogin() {
+    this.showLogin = true;
+  }
+
+  openSignUp() {
+    this.showLogin = false;
   }
 
 }

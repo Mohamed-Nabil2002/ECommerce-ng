@@ -1,5 +1,16 @@
 {
   "seller": [
-
+    {
+      "name": "Mostafa",
+      "password": "mos",
+      "email": "Mostafa@test33",
+      "id": 1
+    },
+    {
+      "name": "",
+      "password": "admin",
+      "email": "admin",
+      "id": 2
+    }
   ]
 }
