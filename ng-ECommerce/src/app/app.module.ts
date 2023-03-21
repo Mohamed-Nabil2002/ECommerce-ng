@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from './material.module';
 import { FormsModule } from '@angular/forms';
 import { SellerHomeComponent } from './seller-home/seller-home.component';
+import { SellerAddProductComponent } from './seller-add-product/seller-add-product.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { SellerHomeComponent } from './seller-home/seller-home.component';
     SellerAuthComponent,
     PageNotFoundComponent,
     SellerHomeComponent,
+    SellerAddProductComponent,
   ],
   imports: [
     BrowserModule,

@@ -29,6 +29,18 @@
       "password": "adminr",
       "email": "admin",
       "id": 5
+    },
+    {
+      "name": "fatma",
+      "password": "fatma",
+      "email": "fatma",
+      "id": 6
+    },
+    {
+      "name": "islam",
+      "password": "islam",
+      "email": "islam",
+      "id": 7
     }
   ]
 }
