@@ -5,5 +5,5 @@ export interface Product {
   color: string;
   category: string;
   description: string;
-  imageURL: string;
+  image: string;
 }

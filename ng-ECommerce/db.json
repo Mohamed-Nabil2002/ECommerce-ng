@@ -54,22 +54,14 @@
       "id": 1
     },
     {
-      "name": "nghfjebwqj",
-      "price": "jhguhfqjb",
-      "color": "jhguyrbvhjb",
-      "category": "hjvuhgehb",
-      "description": "bhvucviwu",
-      "image": "hbvewvge",
+      "name": "IPhone 13",
+      "price": "777",
+      "color": "blue",
+      "category": "phones",
+      "description": "nice phone",
+      "image": "http@test",
       "id": 2
-    },
-    {
-      "name": "nvchd ",
-      "price": "vcdhcg",
-      "color": "bvghcvgh",
-      "category": "bvhghv",
-      "description": "",
-      "image": "",
-      "id": 3
     }
+
   ]
 }

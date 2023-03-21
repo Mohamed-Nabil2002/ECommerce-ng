@@ -12,7 +12,10 @@ export class ProductService {
   constructor(private http: HttpClient) { }
 
   addProduct(data: Product) {
-    console.log(data);
     return this.http.post(`${this.baseURL}/products`, data);
+  }
+
+  getAllProduct() {
+    return this.http.get<Product[]>(`${this.baseURL}/products`)
   }
 }
