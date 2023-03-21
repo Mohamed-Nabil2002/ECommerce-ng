@@ -1,4 +1,6 @@
+import { ProductService } from './../services/product.service';
 import { Component, OnInit } from '@angular/core';
+import { Product } from '../interfaces/product';
 
 @Component({
   selector: 'app-seller-add-product',
@@ -6,14 +8,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./seller-add-product.component.scss']
 })
 export class SellerAddProductComponent implements OnInit {
-
-  constructor() { }
+  addProductMessage: string | undefined;
+  constructor(private productService: ProductService) { }
 
   ngOnInit() {
   }
 
-  submit(data: any) {
-    console.log(data);
+  submit(data: Product) {
+    this.productService.addProduct(data)
+      .subscribe((res) => {
+        if (res) {
+          this.addProductMessage = "Product is successfully added"
+        }
+        setTimeout(() => {
+          this.addProductMessage = undefined;
+        }, 3000);
+      })
   }
 
 }

@@ -42,5 +42,34 @@
       "email": "islam",
       "id": 7
     }
+  ],
+  "products": [
+    {
+      "name": "sony",
+      "price": "1000",
+      "color": "red",
+      "category": "phones",
+      "description": "good phone",
+      "image": "http@tes",
+      "id": 1
+    },
+    {
+      "name": "nghfjebwqj",
+      "price": "jhguhfqjb",
+      "color": "jhguyrbvhjb",
+      "category": "hjvuhgehb",
+      "description": "bhvucviwu",
+      "image": "hbvewvge",
+      "id": 2
+    },
+    {
+      "name": "nvchd ",
+      "price": "vcdhcg",
+      "color": "bvghcvgh",
+      "category": "bvhghv",
+      "description": "",
+      "image": "",
+      "id": 3
+    }
   ]
 }
