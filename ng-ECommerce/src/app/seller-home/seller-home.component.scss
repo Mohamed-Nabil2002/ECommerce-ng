@@ -4,13 +4,23 @@ table {
   border-collapse: collapse;
 }
 
-table td, table th {
-  border: 1px blue solid;
-  padding: 10px;
-  min-height: 160px;
+table th,
+table td {
+  border: 1px solid blue;
+  padding: 1rem;
+  min-height: 16rem;
+  color: blue;
 }
 
 img {
-  width: 100px;
-  height: 100px;
+  width: 6rem;
+  height: 6rem;
+}
+
+button{
+  font-size: 1rem;
+  color: blue;
+  border: 1px solid blue;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
 }

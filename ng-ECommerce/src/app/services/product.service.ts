@@ -18,4 +18,8 @@ export class ProductService {
   getAllProduct() {
     return this.http.get<Product[]>(`${this.baseURL}/products`)
   }
+
+  deleteProduct(id: number) {
+    return this.http.delete(`${this.baseURL}/products/${id}`)
+  }
 }

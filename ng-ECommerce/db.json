@@ -45,23 +45,22 @@
   ],
   "products": [
     {
-      "name": "sony",
+      "name": "z3",
       "price": "1000",
       "color": "red",
-      "category": "phones",
-      "description": "good phone",
-      "image": "http@tes",
+      "category": "Phones",
+      "description": "Good one",
+      "image": "",
       "id": 1
     },
     {
-      "name": "IPhone 13",
-      "price": "777",
-      "color": "blue",
-      "category": "phones",
-      "description": "nice phone",
-      "image": "http@test",
+      "name": "z3",
+      "price": "1000",
+      "color": "red",
+      "category": "Phones",
+      "description": "Good one",
+      "image": "",
       "id": 2
     }
-
   ]
 }
