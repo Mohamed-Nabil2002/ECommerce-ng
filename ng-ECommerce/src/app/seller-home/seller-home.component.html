@@ -23,7 +23,7 @@
         <td>{{prdouct.description}}</td>
         <td>
           <button (click)="deleteProduct(prdouct.id)">Delete</button>
-          <button class="update-btn" (click)="updateProduct()" routerLink="/seller-update-product/{{prdouct.id}}">Update</button>
+          <button class="update-btn" routerLink="/seller-update-product/{{prdouct.id}}">Update</button>
         </td>
       </tr>
     </tbody>

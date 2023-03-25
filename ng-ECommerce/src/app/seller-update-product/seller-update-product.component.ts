@@ -10,16 +10,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SellerUpdateProductComponent implements OnInit {
   productData: undefined | Product;
+  productMessage: undefined | string;
   constructor(private route: ActivatedRoute,
     private productService: ProductService) { }
 
   ngOnInit() {
     let productId = this.route.snapshot.paramMap.get("id");
-    console.log(productId);
     this.productService.getProduct(productId).subscribe((product) => {
-      console.log(product);
       this.productData = product;
     })
+  }
+
+  submit(product: Product) {
+    if (this.productData) {
+      product.id = this.productData.id;
+    }
+    this.productService.updateProduct(product).subscribe((product) => {
+      if (product) {
+        this.productMessage = "Product Has Updated";
+      }
+    })
+    setTimeout(() => {
+      this.productMessage = undefined;
+    }, 2000);
   }
 
 }

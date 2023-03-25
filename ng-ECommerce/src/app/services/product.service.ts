@@ -16,14 +16,19 @@ export class ProductService {
   }
 
   getAllProduct() {
-    return this.http.get<Product[]>(`${this.baseURL}/products`)
+    return this.http.get<Product[]>(`${this.baseURL}/products`);
   }
 
   deleteProduct(id: number) {
-    return this.http.delete(`${this.baseURL}/products/${id}`)
+    return this.http.delete(`${this.baseURL}/products/${id}`);
   }
 
   getProduct(id: string) {
-    return this.http.get<Product>(`${this.baseURL}/products/${id}`)
+    return this.http.get<Product>(`${this.baseURL}/products/${id}`);
+  }
+
+  updateProduct(product: Product) {
+    console.log(product.id, "ID");
+    return this.http.put<Product>(`${this.baseURL}/products/${product.id}`, product);
   }
 }
