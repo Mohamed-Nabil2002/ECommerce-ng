@@ -15,13 +15,16 @@
     </thead>
     <tbody>
       <tr *ngFor="let prdouct of productList">
-        <td><img src="{{prdouct.image}}"/></td>
+        <td><img src="{{prdouct.image}}" /></td>
         <td>{{prdouct.name}}</td>
         <td>{{prdouct.price}}</td>
         <td>{{prdouct.color}}</td>
         <td>{{prdouct.category}}</td>
         <td>{{prdouct.description}}</td>
-        <button (click)="deleteProduct(prdouct.id)">Delete</button>
+        <td>
+          <button (click)="deleteProduct(prdouct.id)">Delete</button>
+          <button class="update-btn" (click)="updateProduct()" routerLink="/seller-update-product/{{prdouct.id}}">Update</button>
+        </td>
       </tr>
     </tbody>
   </table>

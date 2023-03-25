@@ -6,6 +6,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from './auth.guard';
 import { SellerAddProductComponent } from './seller-add-product/seller-add-product.component';
+import { SellerUpdateProductComponent } from './seller-update-product/seller-update-product.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,11 @@ const routes: Routes = [
   {
     path: "seller-add-product",
     component: SellerAddProductComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: "seller-update-product/:id",
+    component: SellerUpdateProductComponent,
     canActivate: [AuthGuard]
   },
   {
