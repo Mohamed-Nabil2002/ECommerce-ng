@@ -1,3 +1,4 @@
+import { UserAuthComponent } from './user-auth/user-auth.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { SearchComponent } from './search/search.component';
 import { SellerHomeComponent } from './seller-home/seller-home.component';
@@ -41,6 +42,10 @@ const routes: Routes = [
   {
     path: "details/:productId",
     component: ProductDetailsComponent,
+  },
+  {
+    path: "user-auth",
+    component: UserAuthComponent,
   },
   {
     path: "**",
