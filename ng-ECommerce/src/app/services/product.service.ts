@@ -36,7 +36,11 @@ export class ProductService {
     return this.http.get<Product[]>(`${this.baseURL}/products?_limit=3`);
   }
 
-  tendyProducts() {
+  trendyProducts() {
     return this.http.get<Product[]>(`${this.baseURL}/products?_limit=8`);
+  }
+
+  searchProducts(query: string) {
+    return this.http.get<Product[]>(`${this.baseURL}/products?q=${query}`);
   }
 }

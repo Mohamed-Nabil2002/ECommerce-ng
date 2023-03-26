@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
     this.productService.popularProducts().subscribe((result) => {
       this.popularProducts = result;
     })
-    this.productService.tendyProducts().subscribe((result) => {
+    this.productService.trendyProducts().subscribe((result) => {
       this.trendyProducts = result;
     })
   }
