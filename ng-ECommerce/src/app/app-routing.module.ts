@@ -1,3 +1,4 @@
+import { ProductDetailsComponent } from './product-details/product-details.component';
 import { SearchComponent } from './search/search.component';
 import { SellerHomeComponent } from './seller-home/seller-home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -36,6 +37,10 @@ const routes: Routes = [
   {
     path: "search/:query",
     component: SearchComponent,
+  },
+  {
+    path: "details/:productId",
+    component: ProductDetailsComponent,
   },
   {
     path: "**",
