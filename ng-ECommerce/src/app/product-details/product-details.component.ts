@@ -10,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductDetailsComponent implements OnInit {
   productData: undefined | Product;
+  productQuantity: number = 1;
   constructor(private activatedRoute: ActivatedRoute, private productService: ProductService) { }
 
   ngOnInit() {
@@ -17,6 +18,14 @@ export class ProductDetailsComponent implements OnInit {
     this.productService.getProduct(productId).subscribe((res) => {
       this.productData = res;
     })
+  }
+
+  handleQuantity(val: string) {
+    if (this.productQuantity < 20 && val === "plus") {
+      this.productQuantity += 1;
+    } else if (this.productQuantity > 1 && val === "min"){
+      this.productQuantity -= 1;
+    }
   }
 
 }
