@@ -28,7 +28,6 @@ export class ProductService {
   }
 
   updateProduct(product: Product) {
-    console.log(product.id, "ID");
     return this.http.put<Product>(`${this.baseURL}/products/${product.id}`, product);
   }
 
