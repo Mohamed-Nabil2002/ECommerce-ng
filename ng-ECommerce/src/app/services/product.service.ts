@@ -31,4 +31,12 @@ export class ProductService {
     console.log(product.id, "ID");
     return this.http.put<Product>(`${this.baseURL}/products/${product.id}`, product);
   }
+
+  popularProducts() {
+    return this.http.get<Product[]>(`${this.baseURL}/products?_limit=3`);
+  }
+
+  tendyProducts() {
+    return this.http.get<Product[]>(`${this.baseURL}/products?_limit=8`);
+  }
 }

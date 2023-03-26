@@ -1,3 +1,5 @@
+import { Product } from './../interfaces/product';
+import { ProductService } from './../services/product.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
+  popularProducts: undefined | Product[];
+  trendyProducts: undefined | Product[];
+  constructor(private productService: ProductService) { }
 
   ngOnInit() {
+    this.productService.popularProducts().subscribe((result) => {
+      this.popularProducts = result;
+    })
+    this.productService.tendyProducts().subscribe((result) => {
+      this.trendyProducts = result;
+    })
   }
 
 }
