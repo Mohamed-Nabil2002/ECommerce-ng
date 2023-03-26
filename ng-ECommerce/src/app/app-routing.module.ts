@@ -1,3 +1,4 @@
+import { SearchComponent } from './search/search.component';
 import { SellerHomeComponent } from './seller-home/seller-home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SellerAuthComponent } from './seller-auth/seller-auth.component';
@@ -31,6 +32,10 @@ const routes: Routes = [
     path: "seller-update-product/:id",
     component: SellerUpdateProductComponent,
     canActivate: [AuthGuard]
+  },
+  {
+    path: "search/:query",
+    component: SearchComponent,
   },
   {
     path: "**",

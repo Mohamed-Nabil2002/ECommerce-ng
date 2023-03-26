@@ -1,8 +1,8 @@
 <nav class="nav">
   <h1><a href="/">E-Comm</a></h1>
   <div *ngIf="menuType === 'default'" class="nav-search">
-    <input (keyup)="searchProduct($event)" (blur)="hideSearch()" type="text" placeholder="Search for product">
-    <button>Search</button>
+    <input #searchInput (keyup)="searchProduct($event)" (blur)="hideSearch()" type="text" placeholder="Search for product">
+    <button (click)="submitSearch(searchInput.value)">Search</button>
     <ul class="suggested-result" *ngIf="searchResult">
       <li *ngFor="let item of searchResult">
         <a>{{item.name}}</a>

@@ -52,4 +52,8 @@ export class HeaderComponent implements OnInit {
     this.searchResult = undefined;
   }
 
+  submitSearch(val: string) {
+    this.router.navigate([`search/${val}`]);
+  }
+
 }
