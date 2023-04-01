@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserAuthComponent implements OnInit {
   showLoggin: boolean = true;
+  authError: string = "";
   constructor(private userService: UserService) { }
 
   ngOnInit() {
@@ -20,7 +21,12 @@ export class UserAuthComponent implements OnInit {
   }
 
   login(data: Login) {
-    console.log(data);
+    this.userService.userLogin(data);
+    this.userService.invalidUserAuth.subscribe(result => {
+      if (result) {
+        this.authError = "Please Enter Valid User Details";
+      }
+    })
   }
 
   openSignUp() {
