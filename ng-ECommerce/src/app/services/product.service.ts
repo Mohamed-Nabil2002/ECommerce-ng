@@ -82,4 +82,8 @@ export class ProductService {
         if (result && result.body) this.cartData.emit(result.body);
       });
   }
+
+  removeToCart(cartId: number): Observable<any> {
+    return this.http.delete(`${this.baseURL}/cart/${cartId}`);
+  }
 }

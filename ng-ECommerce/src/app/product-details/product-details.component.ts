@@ -13,6 +13,7 @@ export class ProductDetailsComponent implements OnInit {
   productData: undefined | Product;
   productQuantity: number = 1;
   removecart: boolean = false;
+  cartData: Product | undefined;
   constructor(private activatedRoute: ActivatedRoute, private productService: ProductService) { }
 
   ngOnInit() {
@@ -40,6 +41,7 @@ export class ProductDetailsComponent implements OnInit {
           productId.toString() === item.productId.toString();
         });
         if (item.length) {
+          this.cartData = item[0];
           this.removecart = true;
         }
       })
@@ -81,8 +83,18 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   removeToCart(id: number) {
-    this.productService.removeFromCart(id);
-    this.removecart = false;
+    if (!localStorage.getItem("user")) {
+      this.productService.removeFromCart(id);
+    } else {
+      let user = localStorage.getItem("user");
+      let userId = user && JSON.parse(user).id;
+      this.cartData && this.productService.removeToCart(this.cartData.id)
+        .subscribe((result) => {
+          if (result) {
+            this.productService.getCartList(userId);
+          }
+        })
+      this.removecart = false;
+    }
   }
-
 }
