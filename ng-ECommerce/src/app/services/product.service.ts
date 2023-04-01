@@ -55,7 +55,7 @@ export class ProductService {
       cartData.push(data);
       localStorage.setItem('localCart', JSON.stringify(cartData));
     }
-    this.cartData.emit(cartData);
+    // this.cartData.emit(cartData);
   }
 
   removeFromCart(productId: number): void {
@@ -71,5 +71,15 @@ export class ProductService {
 
   addToCart(cartData: Cart): Observable<any> {
     return this.http.post(`${this.baseURL}/cart`, cartData);
+  }
+
+  getCartList(userId: number) {
+    return this.http
+      .get<Product[]>(`${this.baseURL}/cart?userId=${userId}`, {
+        observe: 'response',
+      })
+      .subscribe((result: any) => {
+        if (result && result.body) this.cartData.emit(result.body);
+      });
   }
 }

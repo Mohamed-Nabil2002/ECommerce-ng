@@ -31,6 +31,19 @@ export class ProductDetailsComponent implements OnInit {
         this.removecart = false;
       }
     }
+    let user = localStorage.getItem("user");
+    if (user) {
+      let userId = user && JSON.parse(user).id;
+      this.productService.getCartList(userId);
+      this.productService.cartData.subscribe((result) => {
+        let item = result.filter((item: Product) => {
+          productId.toString() === item.productId.toString();
+        });
+        if (item.length) {
+          this.removecart = true;
+        }
+      })
+    }
   }
 
   handleQuantity(val: string) {
@@ -59,7 +72,8 @@ export class ProductDetailsComponent implements OnInit {
         delete cartData.id;
         this.productService.addToCart(cartData).subscribe(result => {
           if (result) {
-            alert("Product Is Added In Cart");
+            this.productService.getCartList(userId);
+            this.removecart = true;
           }
         })
       }
