@@ -21,12 +21,6 @@ export class UserService {
       });
   }
 
-  userAuthReload() {
-    if (localStorage.getItem("user")) {
-      this.router.navigate(['/']);
-    }
-  }
-
   userLogin(data: Login): void {
     this.http
       .get<SignUp[]>(
@@ -40,5 +34,11 @@ export class UserService {
           this.router.navigate(['/']);
         } else this.invalidUserAuth.emit(true);
       });
+  }
+
+  userAuthReload() {
+    if (localStorage.getItem("user")) {
+      this.router.navigate(['/']);
+    }
   }
 }
