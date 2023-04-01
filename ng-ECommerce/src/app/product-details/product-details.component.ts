@@ -49,7 +49,8 @@ export class ProductDetailsComponent implements OnInit {
         this.removecart = true;
       } else {
         let user = localStorage.getItem("user");
-        let userId = user && JSON.parse(user).id;
+        let userId = user && JSON.parse(user)[0].id;
+        console.log(userId);
         let cartData: Cart = {
           ...this.productData,
           userId,
