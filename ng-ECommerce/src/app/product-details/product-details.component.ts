@@ -51,7 +51,8 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   removeToCart(id: number) {
-    this.productService.removeFromCart(id)
+    this.productService.removeFromCart(id);
+    this.removecart = false;
   }
 
 }
