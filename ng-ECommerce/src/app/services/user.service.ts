@@ -19,4 +19,10 @@ baseURl = "http://localhost:3000/users"
       }
     });
   }
+
+  userAuthReload() {
+    if (localStorage.getItem("user")) {
+      this.router.navigate(['/']);
+    }
+  }
 }
