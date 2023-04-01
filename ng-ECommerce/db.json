@@ -41,6 +41,12 @@
       "password": "islam",
       "email": "islam",
       "id": 7
+    },
+    {
+      "name": "ahmed",
+      "password": "ahmed",
+      "email": "ahmed@test",
+      "id": 8
     }
   ],
   "products": [

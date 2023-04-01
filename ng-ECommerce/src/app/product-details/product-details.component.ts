@@ -11,13 +11,25 @@ import { Component, OnInit } from '@angular/core';
 export class ProductDetailsComponent implements OnInit {
   productData: undefined | Product;
   productQuantity: number = 1;
+  removecart: boolean = false;
   constructor(private activatedRoute: ActivatedRoute, private productService: ProductService) { }
 
   ngOnInit() {
     let productId = this.activatedRoute.snapshot.paramMap.get("productId");
     this.productService.getProduct(productId).subscribe((res) => {
       this.productData = res;
-    })
+    });
+
+    let cartData = localStorage.getItem("localCart");
+    if (productId && cartData) {
+      let items = JSON.parse(cartData);
+      items = items.filter((item: Product) => productId = item.id.toString());
+      if (items.length) {
+        this.removecart = true;
+      } else {
+        this.removecart = false;
+      }
+    }
   }
 
   handleQuantity(val: string) {
@@ -32,9 +44,14 @@ export class ProductDetailsComponent implements OnInit {
     if (this.productData) {
       this.productData.quantity = this.productQuantity;
       if (!localStorage.getItem("user")) {
-        this.productService.localAddToCart(this.productData)
+        this.productService.localAddToCart(this.productData);
+        this.removecart = true;
       }
     }
+  }
+
+  removeToCart(id: number) {
+    this.productService.removeFromCart(id)
   }
 
 }
