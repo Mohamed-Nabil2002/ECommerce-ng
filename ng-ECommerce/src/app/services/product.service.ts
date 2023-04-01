@@ -1,3 +1,5 @@
+import { Observable } from 'rxjs';
+import { Cart } from './../interfaces/cart';
 import { Product } from './../interfaces/product';
 import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable, Output } from '@angular/core';
@@ -65,5 +67,9 @@ export class ProductService {
       localStorage.setItem('localCart', JSON.stringify(items));
       this.cartData.emit(items);
     }
+  }
+
+  addToCart(cartData: Cart): Observable<any> {
+    return this.http.post(`${this.baseURL}/cart`, cartData);
   }
 }
