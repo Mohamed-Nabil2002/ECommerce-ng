@@ -1,3 +1,4 @@
+import { CartPageComponent } from './cart-page/cart-page.component';
 import { UserAuthComponent } from './user-auth/user-auth.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { SearchComponent } from './search/search.component';
@@ -46,6 +47,10 @@ const routes: Routes = [
   {
     path: "user-auth",
     component: UserAuthComponent,
+  },
+  {
+    path: "cart-page",
+    component: CartPageComponent,
   },
   {
     path: "**",
