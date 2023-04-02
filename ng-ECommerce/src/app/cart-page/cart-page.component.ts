@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cart-page.component.scss']
 })
 export class CartPageComponent implements OnInit {
-  cartData: Cart | undefined;
+  cartData: Cart[] | undefined;
   priceSummary: priceSummary = {
     price: 0,
     discount: 0,
@@ -37,6 +37,9 @@ export class CartPageComponent implements OnInit {
       this.priceSummary.tax = this.priceSummary.price / 10;
       this.priceSummary.delivery = 100;
       this.priceSummary.total = this.priceSummary.price + (this.priceSummary.price / 10 + 100) - (this.priceSummary.price / 10);
+      if (!this.cartData.length) {
+        this.router.navigate(['/']);
+      }
     });
   }
 
@@ -44,13 +47,13 @@ export class CartPageComponent implements OnInit {
     this.router.navigate(['/checkout']);
   }
 
-  // removeFromCart(cartId: number | undefined): void {
-  //   cartId &&
-  //     this.productService
-  //       .removeFromCartList(cartId)
-  //       .subscribe((result: any) => {
-  //         if (result) this.getCurrentCart();
-  //       });
-  // }
+  removeFromCart(cartId: number | undefined): void {
+    cartId &&
+      this.productService
+        .removeToCart(cartId)
+        .subscribe((result: any) => {
+          if (result) this.getCurrentCart();
+        });
+  }
 
 }
