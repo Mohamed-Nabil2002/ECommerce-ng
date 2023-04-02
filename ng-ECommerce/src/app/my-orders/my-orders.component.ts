@@ -12,12 +12,20 @@ export class MyOrdersComponent implements OnInit {
   constructor(private productService: ProductService) { }
 
   ngOnInit() {
+    this.getAllOrders();
   }
 
   private getAllOrders(): void {
     this.productService.getOrdersList().subscribe((result: any) => {
       this.orderData = result;
     });
+  }
+
+  cancelOrder(orderId: number | undefined): void {
+    orderId &&
+      this.productService.deleteOrder(orderId).subscribe((result: any) => {
+        if (result) this.getAllOrders();
+      });
   }
 
 }

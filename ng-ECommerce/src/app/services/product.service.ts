@@ -115,4 +115,8 @@ export class ProductService {
         if (result) this.cartData.emit([]);
       });
   }
+
+  deleteOrder(orderId: number): Observable<any> {
+    return this.http.delete(`${this.baseURL}/orders/${orderId}`);
+  }
 }
