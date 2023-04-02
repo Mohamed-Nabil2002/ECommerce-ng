@@ -1,3 +1,4 @@
+import { Order } from './../interfaces/order';
 import { Observable } from 'rxjs';
 import { Cart } from './../interfaces/cart';
 import { Product } from './../interfaces/product';
@@ -93,5 +94,9 @@ export class ProductService {
     return this.http.get<Cart[]>(
       `${this.baseURL}/cart?userId=${userData.id}`
     );
+  }
+
+  orderNow(orderData: Order): Observable<any> {
+    return this.http.post(`${this.baseURL}/orders`, orderData);
   }
 }
