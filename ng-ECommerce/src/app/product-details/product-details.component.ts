@@ -14,7 +14,8 @@ export class ProductDetailsComponent implements OnInit {
   productQuantity: number = 1;
   removecart: boolean = false;
   cartData: Product | undefined;
-  constructor(private activatedRoute: ActivatedRoute, private productService: ProductService) { }
+  constructor(private activatedRoute: ActivatedRoute,
+    private productService: ProductService) { }
 
   ngOnInit() {
     let productId = this.activatedRoute.snapshot.paramMap.get("productId");

@@ -111,9 +111,146 @@
       "email": "Ahmed@test123",
       "password": "123123",
       "id": 1
+    },
+    {
+      "name": "ahmed",
+      "email": "ahmed@test",
+      "password": "ahmed",
+      "id": 2
     }
   ],
   "cart": [
-
+    {
+      "name": "z3",
+      "price": "11111111",
+      "color": "redddddddddddddddddddddddddddddddddddddddddddd",
+      "category": "Phones",
+      "description": "Good one",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/3/2022/08/samsung-galaxy-s23-complete-list-43ee4b3.png",
+      "quantity": 2,
+      "userId": 2,
+      "productId": 1,
+      "id": 1
+    },
+    {
+      "name": "z3",
+      "price": "11111111",
+      "color": "redddddddddddddddddddddddddddddddddddddddddddd",
+      "category": "Phones",
+      "description": "Good one",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/3/2022/08/samsung-galaxy-s23-complete-list-43ee4b3.png",
+      "quantity": 2,
+      "userId": 2,
+      "productId": 1,
+      "id": 2
+    },
+    {
+      "name": "z3",
+      "price": "11111111",
+      "color": "redddddddddddddddddddddddddddddddddddddddddddd",
+      "category": "Phones",
+      "description": "Good one",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/3/2022/08/samsung-galaxy-s23-complete-list-43ee4b3.png",
+      "quantity": 2,
+      "userId": 2,
+      "productId": 1,
+      "id": 3
+    },
+    {
+      "name": "z3",
+      "price": "11111111",
+      "color": "redddddddddddddddddddddddddddddddddddddddddddd",
+      "category": "Phones",
+      "description": "Good one",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/3/2022/08/samsung-galaxy-s23-complete-list-43ee4b3.png",
+      "quantity": 3,
+      "userId": 2,
+      "productId": 1,
+      "id": 4
+    },
+    {
+      "name": "z3",
+      "price": "11111111",
+      "color": "redddddddddddddddddddddddddddddddddddddddddddd",
+      "category": "Phones",
+      "description": "Good one",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/3/2022/08/samsung-galaxy-s23-complete-list-43ee4b3.png",
+      "quantity": 3,
+      "userId": 2,
+      "productId": 1,
+      "id": 5
+    },
+    {
+      "name": "z3",
+      "price": "11111111",
+      "color": "redddddddddddddddddddddddddddddddddddddddddddd",
+      "category": "Phones",
+      "description": "Good one",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/3/2022/08/samsung-galaxy-s23-complete-list-43ee4b3.png",
+      "quantity": 3,
+      "userId": 2,
+      "productId": 1,
+      "id": 6
+    },
+    {
+      "name": "z3",
+      "price": "11111111",
+      "color": "redddddddddddddddddddddddddddddddddddddddddddd",
+      "category": "Phones",
+      "description": "Good one",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/3/2022/08/samsung-galaxy-s23-complete-list-43ee4b3.png",
+      "quantity": 3,
+      "userId": 2,
+      "productId": 1,
+      "id": 7
+    },
+    {
+      "name": "z3",
+      "price": "11111111",
+      "color": "redddddddddddddddddddddddddddddddddddddddddddd",
+      "category": "Phones",
+      "description": "Good one",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/3/2022/08/samsung-galaxy-s23-complete-list-43ee4b3.png",
+      "quantity": 3,
+      "userId": 2,
+      "productId": 1,
+      "id": 8
+    },
+    {
+      "name": "z3",
+      "price": "11111111",
+      "color": "redddddddddddddddddddddddddddddddddddddddddddd",
+      "category": "Phones",
+      "description": "Good one",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/3/2022/08/samsung-galaxy-s23-complete-list-43ee4b3.png",
+      "quantity": 3,
+      "userId": 2,
+      "productId": 1,
+      "id": 9
+    },
+    {
+      "name": "z3",
+      "price": "11111111",
+      "color": "redddddddddddddddddddddddddddddddddddddddddddd",
+      "category": "Phones",
+      "description": "Good one",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/3/2022/08/samsung-galaxy-s23-complete-list-43ee4b3.png",
+      "quantity": 3,
+      "userId": 2,
+      "productId": 1,
+      "id": 10
+    },
+    {
+      "name": "z3",
+      "price": "11111111",
+      "color": "redddddddddddddddddddddddddddddddddddddddddddd",
+      "category": "Phones",
+      "description": "Good one",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/3/2022/08/samsung-galaxy-s23-complete-list-43ee4b3.png",
+      "quantity": 3,
+      "userId": 2,
+      "productId": 1,
+      "id": 11
+    }
   ]
 }
